@@ -1,0 +1,11 @@
+#popular {
+    margin-top: 60px;
+}
+
+.popular-title {
+    margin: 30px 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 62px;
+}

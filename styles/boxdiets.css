@@ -1,0 +1,51 @@
+#boxdiets {
+    margin-top: 80px;
+}
+
+.boxdiets-title {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 62px;
+}
+
+.boxdiets-list {
+    margin-top: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 110px;
+}
+
+.boxdiets-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+
+.boxdiets-item-icon {
+    position: relative;
+    width: 134px;
+    height: 134px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--gray-4);
+    border-radius: 20px;
+}
+
+.boxdiets-item-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.boxdiets-item-desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--gray-2);
+    max-width: 300px;
+}

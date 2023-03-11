@@ -1,0 +1,144 @@
+/* CSS RESET */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea {
+    border: none;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+:root {
+    --white: #fff;
+    --gray-1: #111112;
+    --gray-2: #adaeaf;
+    --gray-3: #eaeaea;
+    --gray-4: #f5f5f5;
+    --gray-5: #fdfbfa;
+    --primary-1: #1ac84b;
+    --primary-2: #ffb21a;
+    --secondary-1: #0056fc;
+    --secondary-2: #f700fc;
+}
+
+#app {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    color: var(--gray-1);
+    background: var(--white);
+}
+
+.app-container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* LOGO */
+.logo > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    color: var(--gray-1);
+}
+
+/* DECORATIONS */
+
+.decorations-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+    background: var(--gray-3);
+}
+
+.decorations-top::before {
+    content: "";
+    flex: 1;
+    background: var(--white);
+    height: 200px;
+    border-bottom-right-radius: 80px;
+}
+.decorations-top::after {
+    content: "";
+    flex: 1;
+    background: var(--white);
+    height: 200px;
+    border-bottom-left-radius: 80px;
+}
+
+.decorations-bottom {
+    background: var(--gray-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+}
+
+.decorations-bottom::before {
+    content: "";
+    flex: 1;
+    background: var(--white);
+    height: 200px;
+    border-top-right-radius: 80px;
+}
+.decorations-bottom::after {
+    content: "";
+    flex: 1;
+    background: var(--white);
+    height: 200px;
+    border-top-left-radius: 80px;
+}
+
+.skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(200, 20%, 80%);
+    }
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}

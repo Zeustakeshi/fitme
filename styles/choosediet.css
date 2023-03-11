@@ -1,0 +1,69 @@
+#choose-diet {
+    margin-top: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.choose-diet-main-content {
+    position: relative;
+    border-radius: 80px;
+    background: var(--gray-3);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px 0;
+    overflow: hidden;
+}
+.choose-diet-main-content--show-decorations::before {
+    position: absolute;
+    content: "";
+    width: 30%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("../assets/trialdiet/image-left.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.choose-diet-main-content--show-decorations::after {
+    position: absolute;
+    content: "";
+    width: 30%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-image: url("../assets/trialdiet/image-right.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.choose-diet-main-content > h4 {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 62px;
+    margin-bottom: 8px;
+}
+.choose-diet-main-content > p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.choose-diet-main-content .button-choose-diet {
+    padding: 12px 20px;
+    background: var(--gray-1);
+    color: var(--gray-5);
+    font-weight: 500;
+    border-radius: 100rem;
+}

@@ -1,0 +1,35 @@
+#header {
+    position: sticky;
+    top: 0;
+    background: var(--white);
+    z-index: 1000;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ACTION */
+.header-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.button-register {
+    padding: 12px 25px;
+    background: var(--gray-1);
+    color: var(--gray-5);
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 100rem;
+    cursor: pointer;
+}
+
+.button-cart {
+    cursor: pointer;
+}
