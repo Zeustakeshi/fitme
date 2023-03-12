@@ -37,6 +37,26 @@ a {
     color: currentColor;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 16px 20px;
+}
+
+th {
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
 :root {
     --white: #fff;
     --gray-1: #111112;
@@ -132,6 +152,16 @@ a {
 
 .skeleton {
     animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
 }
 
 @keyframes skeleton-loading {
