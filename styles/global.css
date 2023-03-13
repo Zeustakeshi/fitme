@@ -9,6 +9,11 @@
     padding: 0;
     font: inherit;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 img,
 picture,
 svg,
@@ -26,6 +31,11 @@ textarea {
 
 button {
     cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.9;
 }
 
 ul {
@@ -55,6 +65,15 @@ th {
 
 tr:nth-child(even) {
     background-color: #f5f5f5;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 :root {

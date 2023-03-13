@@ -15,6 +15,7 @@
         />
         <!-- CSS -->
         <link rel="stylesheet" href="./styles/global.css" />
+        <link rel="stylesheet" href="./styles/modal.css" />
         <link rel="stylesheet" href="./styles/header.css" />
         <link rel="stylesheet" href="./styles/nav.css" />
         <link rel="stylesheet" href="./styles/banner.css" />
@@ -26,6 +27,7 @@
         <link rel="stylesheet" href="./styles/choosediet.css" />
         <link rel="stylesheet" href="./styles/orderprocess.css" />
         <link rel="stylesheet" href="./styles/boxdiets.css" />
+        <link rel="stylesheet" href="./styles/buttonmovetotop.css" />
         <!-- TITLE -->
         <title>Fitme</title>
     </head>
@@ -110,7 +112,9 @@
                     tempore, cum soluta nobis est
                 </div>
                 <div class="banner-action">
-                    <button class="button-adjust-diet">Adjust diet</button>
+                    <a href="./pages/diets.html" class="button-adjust-diet"
+                        >Adjust diet</a
+                    >
                     <button class="button-watch-video">
                         <span class="button-watch-video-icon">
                             <svg
@@ -698,7 +702,9 @@
                 >
                     <h4>Order your trial diet</h4>
                     <p>Try any diet to choose the right one for you</p>
-                    <button class="button-choose-diet">Choose a diet</button>
+                    <a href="./pages/diets.html" class="button-choose-diet"
+                        >Choose a diet</a
+                    >
                 </div>
                 <div class="decorations-bottom"></div>
             </section>
@@ -1151,6 +1157,6 @@
                 </div>
             </footer>
         </div>
-        <script src="./scripts/js/index.js" type="module"></script>
+        <script src="./scripts/homepage.js" type="module"></script>
     </body>
 </html>

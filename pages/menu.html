@@ -17,6 +17,9 @@
         <link rel="stylesheet" href=" ../styles/global.css" />
         <link rel="stylesheet" href="../styles/header.css" />
         <link rel="stylesheet" href="../styles/nav.css" />
+        <link rel="stylesheet" href="../styles/dropdown.css" />
+        <link rel="stylesheet" href="../styles/menu.css" />
+        <link rel="stylesheet" href="../styles/product.css" />
         <link rel="stylesheet" href="../styles/footer.css" />
         <!-- TITLE -->
         <title>Menu</title>
@@ -76,6 +79,457 @@
                     </div>
                 </div>
             </header>
+            <section id="menu-wrapper" class="app-container">
+                <h3 class="menu-head">Menu</h3>
+                <div class="menu-container">
+                    <div class="menu-control">
+                        <ul class="menu-nav">
+                            <li class="active">Top rated</li>
+                            <li class="">Breakfast</li>
+                            <li class="">II Breakfast</li>
+                            <li class="">Lunch</li>
+                            <li class="">Snacks</li>
+                            <li class="">Dinner</li>
+                        </ul>
+                        <div class="menu-filter">
+                            <div class="menu-filter-label">Choose a diet:</div>
+                            <label class="dropdown" for="dropdown-toggle">
+                                <input
+                                    type="checkbox"
+                                    id="dropdown-toggle"
+                                    hidden
+                                />
+                                <div
+                                    class="dropdown-select dropdown-activity-level noselect"
+                                >
+                                    <span class="dropdown-value">All</span>
+                                    <span class="dropdown-value-icon">
+                                        <svg
+                                            width="16"
+                                            height="8"
+                                            viewBox="0 0 16 8"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M1 1L8 7L15 1"
+                                                stroke="#111112"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div
+                                    class="dropdown-list dropdown-list-active-level"
+                                >
+                                    <div class="dropdown-item">All</div>
+                                    <div class="dropdown-item">option 1</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <div class="product-item-image skeleton">
+                                <img
+                                    src="https://source.unsplash.com/featured/?cereal"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="product-item-info">
+                                <h5 class="product-item-name">Cereal</h5>
+                                <ul class="product-item-kcal-list">
+                                    <li>
+                                        <span class="kcal-value">1000</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1300</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1500</span>
+                                        <span>kcal</span>
+                                    </li>
+                                </ul>
+                                <p class="product-item-desc">
+                                    Taque earum rerum hic tenetur a sapiente
+                                    maiores alias consequatur aut perferendis
+                                    doloribus asperiores...
+                                </p>
+                                <button class="product-item-button-choose">
+                                    Choose
+                                </button>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <div class="product-item-image skeleton">
+                                <img
+                                    src="https://source.unsplash.com/featured/?salad"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="product-item-info">
+                                <h5 class="product-item-name">Salad</h5>
+                                <ul class="product-item-kcal-list">
+                                    <li>
+                                        <span class="kcal-value">1000</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1300</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1500</span>
+                                        <span>kcal</span>
+                                    </li>
+                                </ul>
+                                <p class="product-item-desc">
+                                    Taque earum rerum hic tenetur a sapiente
+                                    maiores alias consequatur aut perferendis
+                                    doloribus asperiores...
+                                </p>
+                                <button class="product-item-button-choose">
+                                    Choose
+                                </button>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <div class="product-item-image skeleton">
+                                <img
+                                    src="https://source.unsplash.com/featured/?tomato"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="product-item-info">
+                                <h5 class="product-item-name">Tomato</h5>
+                                <ul class="product-item-kcal-list">
+                                    <li>
+                                        <span class="kcal-value">1000</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1300</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1500</span>
+                                        <span>kcal</span>
+                                    </li>
+                                </ul>
+                                <p class="product-item-desc">
+                                    Taque earum rerum hic tenetur a sapiente
+                                    maiores alias consequatur aut perferendis
+                                    doloribus asperiores...
+                                </p>
+                                <button class="product-item-button-choose">
+                                    Choose
+                                </button>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <div class="product-item-image skeleton">
+                                <img
+                                    src="https://source.unsplash.com/featured/?vegetable"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="product-item-info">
+                                <h5 class="product-item-name">Vegetable</h5>
+                                <ul class="product-item-kcal-list">
+                                    <li>
+                                        <span class="kcal-value">1000</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1300</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1500</span>
+                                        <span>kcal</span>
+                                    </li>
+                                </ul>
+                                <p class="product-item-desc">
+                                    Taque earum rerum hic tenetur a sapiente
+                                    maiores alias consequatur aut perferendis
+                                    doloribus asperiores...
+                                </p>
+                                <button class="product-item-button-choose">
+                                    Choose
+                                </button>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <div class="product-item-image skeleton">
+                                <img
+                                    src="https://source.unsplash.com/featured/?cucumber"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="product-item-info">
+                                <h5 class="product-item-name">Cucumber</h5>
+                                <ul class="product-item-kcal-list">
+                                    <li>
+                                        <span class="kcal-value">1000</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1300</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1500</span>
+                                        <span>kcal</span>
+                                    </li>
+                                </ul>
+                                <p class="product-item-desc">
+                                    Taque earum rerum hic tenetur a sapiente
+                                    maiores alias consequatur aut perferendis
+                                    doloribus asperiores...
+                                </p>
+                                <button class="product-item-button-choose">
+                                    Choose
+                                </button>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <div class="product-item-image skeleton">
+                                <img
+                                    src="https://source.unsplash.com/featured/?cabbage"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="product-item-info">
+                                <h5 class="product-item-name">Cabbage</h5>
+                                <ul class="product-item-kcal-list">
+                                    <li>
+                                        <span class="kcal-value">1000</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1300</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1500</span>
+                                        <span>kcal</span>
+                                    </li>
+                                </ul>
+                                <p class="product-item-desc">
+                                    Taque earum rerum hic tenetur a sapiente
+                                    maiores alias consequatur aut perferendis
+                                    doloribus asperiores...
+                                </p>
+                                <button class="product-item-button-choose">
+                                    Choose
+                                </button>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <div class="product-item-image skeleton">
+                                <img
+                                    src="https://source.unsplash.com/featured/?herbs"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="product-item-info">
+                                <h5 class="product-item-name">Herbs</h5>
+                                <ul class="product-item-kcal-list">
+                                    <li>
+                                        <span class="kcal-value">1000</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1300</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1500</span>
+                                        <span>kcal</span>
+                                    </li>
+                                </ul>
+                                <p class="product-item-desc">
+                                    Taque earum rerum hic tenetur a sapiente
+                                    maiores alias consequatur aut perferendis
+                                    doloribus asperiores...
+                                </p>
+                                <button class="product-item-button-choose">
+                                    Choose
+                                </button>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <div class="product-item-image skeleton">
+                                <img
+                                    src="https://source.unsplash.com/featured/?lemon"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="product-item-info">
+                                <h5 class="product-item-name">Lemon</h5>
+                                <ul class="product-item-kcal-list">
+                                    <li>
+                                        <span class="kcal-value">1000</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1300</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1500</span>
+                                        <span>kcal</span>
+                                    </li>
+                                </ul>
+                                <p class="product-item-desc">
+                                    Taque earum rerum hic tenetur a sapiente
+                                    maiores alias consequatur aut perferendis
+                                    doloribus asperiores...
+                                </p>
+                                <button class="product-item-button-choose">
+                                    Choose
+                                </button>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <div class="product-item-image skeleton">
+                                <img
+                                    src="https://source.unsplash.com/featured/?strawberry"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="product-item-info">
+                                <h5 class="product-item-name">Strawberry</h5>
+                                <ul class="product-item-kcal-list">
+                                    <li>
+                                        <span class="kcal-value">1000</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1300</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1500</span>
+                                        <span>kcal</span>
+                                    </li>
+                                </ul>
+                                <p class="product-item-desc">
+                                    Taque earum rerum hic tenetur a sapiente
+                                    maiores alias consequatur aut perferendis
+                                    doloribus asperiores...
+                                </p>
+                                <button class="product-item-button-choose">
+                                    Choose
+                                </button>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <div class="product-item-image skeleton">
+                                <img
+                                    src="https://source.unsplash.com/featured/?radish"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="product-item-info">
+                                <h5 class="product-item-name">Radish</h5>
+                                <ul class="product-item-kcal-list">
+                                    <li>
+                                        <span class="kcal-value">1000</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1300</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1500</span>
+                                        <span>kcal</span>
+                                    </li>
+                                </ul>
+                                <p class="product-item-desc">
+                                    Taque earum rerum hic tenetur a sapiente
+                                    maiores alias consequatur aut perferendis
+                                    doloribus asperiores...
+                                </p>
+                                <button class="product-item-button-choose">
+                                    Choose
+                                </button>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <div class="product-item-image skeleton">
+                                <img
+                                    src="https://source.unsplash.com/featured/?milk"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="product-item-info">
+                                <h5 class="product-item-name">Milk</h5>
+                                <ul class="product-item-kcal-list">
+                                    <li>
+                                        <span class="kcal-value">1000</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1300</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1500</span>
+                                        <span>kcal</span>
+                                    </li>
+                                </ul>
+                                <p class="product-item-desc">
+                                    Taque earum rerum hic tenetur a sapiente
+                                    maiores alias consequatur aut perferendis
+                                    doloribus asperiores...
+                                </p>
+                                <button class="product-item-button-choose">
+                                    Choose
+                                </button>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <div class="product-item-image skeleton">
+                                <img
+                                    src="https://source.unsplash.com/featured/?kiwi"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="product-item-info">
+                                <h5 class="product-item-name">Kiwi</h5>
+                                <ul class="product-item-kcal-list">
+                                    <li>
+                                        <span class="kcal-value">1000</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1300</span>
+                                        <span>kcal</span>
+                                    </li>
+                                    <li>
+                                        <span class="kcal-value">1500</span>
+                                        <span>kcal</span>
+                                    </li>
+                                </ul>
+                                <p class="product-item-desc">
+                                    Taque earum rerum hic tenetur a sapiente
+                                    maiores alias consequatur aut perferendis
+                                    doloribus asperiores...
+                                </p>
+                                <button class="product-item-button-choose">
+                                    Choose
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
             <!-- FOOTER -->
             <footer id="footer">
                 <div class="decorations-top"></div>

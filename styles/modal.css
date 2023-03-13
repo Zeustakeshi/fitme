@@ -1,0 +1,120 @@
+#modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+}
+
+#modal .modal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--white);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 28px;
+    padding-top: 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-container .modal-control {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.modal-container .modal-control > span {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gray-2);
+    cursor: pointer;
+}
+
+.modal-container .modal-control > span:hover {
+    opacity: 0.8;
+    color: var(--gray-1);
+}
+
+#modal .overlay {
+    width: 100%;
+    height: 100%;
+    background: var(--gray-1);
+    opacity: 0.2;
+}
+
+.modal-animation-1 {
+    animation: modal-animation-5 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-animation-2 {
+    animation: modal-animation-2 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-animation-3 {
+    animation: modal-animation-3 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-animation-4 {
+    animation: modal-animation-4 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-animation-5 {
+    animation: modal-animation-5 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes modal-animation-1 {
+    from {
+        transform: scale(0.8) translate(-50%, -50%);
+    }
+    to {
+        transform: scale(1) translate(-50%, -50%);
+    }
+}
+
+@keyframes modal-animation-2 {
+    from {
+        transform: translate(-25%, -50%);
+    }
+    to {
+        transform: scale(1) translate(-50%, -50%);
+    }
+}
+
+@keyframes modal-animation-3 {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modal-animation-4 {
+    from {
+        transform: translate(-50%, 25%);
+    }
+    to {
+        transform: scale(1) translate(-50%, -50%);
+    }
+}
+
+@keyframes modal-animation-5 {
+    from {
+        transform: translate(-50%, -80%);
+    }
+    to {
+        transform: translate(-50%, -50%);
+    }
+}
