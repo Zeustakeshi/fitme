@@ -191,3 +191,20 @@ body::-webkit-scrollbar {
         background-color: hsl(200, 20%, 95%);
     }
 }
+
+/* TEXT OVErFLOW */
+.content-overflow-limitline {
+    --line: 7;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line);
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.content-overflow-one-line {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

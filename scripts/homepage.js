@@ -1,14 +1,12 @@
+import App from "./app.js";
 import Banner from "./banner.js";
-import ButtonMoveToTop from "./buttonMoveToTop.js";
-
-class HomePage {
+class HomePage extends App {
     constructor() {
-        this.rootElement = document.getElementById("app");
+        super();
         this.banner = new Banner(this.rootElement);
-        this.buttonMoveToTop = new ButtonMoveToTop(this.rootElement);
     }
 }
 
 window.addEventListener("load", () => {
-    const homepage = new HomePage();
+    const app = new HomePage();
 });

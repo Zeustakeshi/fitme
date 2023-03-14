@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="../styles/footer.css" />
         <link rel="stylesheet" href="../styles/caloriecalculator.css" />
         <link rel="stylesheet" href="../styles/choosediet.css" />
+        <link rel="stylesheet" href="../styles/buttonmovetotop.css" />
         <!-- TITLE -->
         <title>Calorie-calculator</title>
     </head>
@@ -159,9 +160,13 @@
                                 <span class="input-group-field-label"
                                     >Activity-level</span
                                 >
-                                <label class="dropdown" for="dropdown-toggle">
+                                <label
+                                    class="dropdown dropdown-active-level"
+                                    for="dropdown-toggle"
+                                >
                                     <input
                                         type="checkbox"
+                                        class="dropdown-toggle"
                                         id="dropdown-toggle"
                                         hidden
                                     />
@@ -543,9 +548,6 @@
                 waitUntilVisible: true,
             }).go();
         </script>
-        <script
-            src="../scripts/js/pages/CalorieCalculator.js"
-            type="module"
-        ></script>
+        <script src="../scripts/caloriepage.js" type="module"></script>
     </body>
 </html>
