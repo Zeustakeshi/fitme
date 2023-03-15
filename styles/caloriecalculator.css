@@ -264,3 +264,25 @@
     color: var(--gray-2);
     text-align: justify;
 }
+
+/* DARK THEME */
+
+#app.dark-theme .calculator-options > li {
+    background: var(--slate-800);
+}
+
+#app.dark-theme .calculator-options > li.active {
+    border: none;
+    background: var(--gray-4);
+    color: var(--gray-1);
+}
+
+#app.dark-theme .input-group-field > input {
+    background: var(--slate-800);
+    color: var(--white);
+    border: none;
+}
+
+#app.dark-theme .having-doubts {
+    background: var(--slate-800);
+}

@@ -121,3 +121,20 @@
     right: -30px;
     transform: translateY(-50%);
 }
+
+/* DARK THEME */
+
+#app.dark-theme .customer-review-content {
+    background: var(--slate-800);
+}
+
+#app.dark-theme .customer-review-content > span::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background: var(--gray-4);
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+}

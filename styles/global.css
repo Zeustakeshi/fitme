@@ -54,7 +54,7 @@ table {
 
 td,
 th {
-    border: 1px solid #dddddd;
+    border: 1px solid var(--gray-3);
     text-align: left;
     padding: 16px 20px;
 }
@@ -64,7 +64,16 @@ th {
 }
 
 tr:nth-child(even) {
-    background-color: #f5f5f5;
+    background-color: var(--gray-4);
+}
+
+#app.dark-theme tr:nth-child(even) {
+    background-color: var(--slate-800);
+}
+
+#app.dark-theme td,
+#app.dark-theme th {
+    border: 1px solid var(--gray-2);
 }
 
 body {
@@ -83,6 +92,9 @@ body::-webkit-scrollbar {
     --gray-3: #eaeaea;
     --gray-4: #f5f5f5;
     --gray-5: #fdfbfa;
+    --slate-700: #334155;
+    --slate-800: #1e293b;
+    --slate-900: #0f172a;
     --primary-1: #1ac84b;
     --primary-2: #ffb21a;
     --secondary-1: #0056fc;
@@ -95,6 +107,12 @@ body::-webkit-scrollbar {
     font-size: 16px;
     color: var(--gray-1);
     background: var(--white);
+    transition: all 0.2s linear;
+}
+
+#app.dark-theme {
+    background: var(--slate-900);
+    color: var(--gray-4);
 }
 
 .app-container {
@@ -117,6 +135,10 @@ body::-webkit-scrollbar {
     font-size: 28px;
     line-height: 34px;
     color: var(--gray-1);
+}
+
+#app.dark-theme .logo-text {
+    color: var(--white);
 }
 
 /* DECORATIONS */
@@ -167,6 +189,29 @@ body::-webkit-scrollbar {
     background: var(--white);
     height: 200px;
     border-top-left-radius: 80px;
+}
+
+/* DECORATIONS  DARK THEME*/
+#app.dark-theme .decorations-top {
+    background: var(--slate-800);
+}
+
+#app.dark-theme .decorations-top::before {
+    background: var(--slate-900);
+}
+#app.dark-theme .decorations-top::after {
+    background: var(--slate-900);
+}
+
+#app.dark-theme .decorations-bottom {
+    background: var(--slate-800);
+}
+
+#app.dark-theme .decorations-bottom::before {
+    background: var(--slate-900);
+}
+#app.dark-theme .decorations-bottom::after {
+    background: var(--slate-900);
 }
 
 .skeleton {

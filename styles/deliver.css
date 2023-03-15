@@ -59,7 +59,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 4px;
+    gap: 10px;
 }
 
 .deliver-form-button-check {
@@ -76,7 +76,8 @@
     align-items: center;
     gap: 6px;
     font-weight: 500;
-    background: var(--gray-5);
+    border-radius: 100rem;
+    background: transparent;
     padding: 12px 47px;
 }
 
@@ -164,4 +165,20 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+/* DARK THEME */
+#app.dark-theme .deliver-form-input-group input {
+    background: var(--slate-800);
+    border: none;
+    color: var(--white);
+}
+
+#app.dark-theme .deliver-form-button-locate {
+    background: var(--slate-800);
+    color: var(--gray-400);
+}
+
+#app.dark-theme .deliver-item {
+    background: var(--slate-800);
 }

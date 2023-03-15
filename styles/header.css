@@ -31,5 +31,18 @@
 }
 
 .button-cart {
+    width: 40px;
+    height: 40px;
     cursor: pointer;
+    padding: 4px;
+}
+
+/* DARK THEME */
+
+#app.dark-theme #header {
+    background: var(--slate-800);
+}
+
+#app.dark-theme .button-register {
+    background: var(--gray-1);
 }

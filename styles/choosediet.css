@@ -1,6 +1,5 @@
 #choose-diet {
     margin-top: 40px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,4 +65,9 @@
     color: var(--gray-5);
     font-weight: 500;
     border-radius: 100rem;
+}
+
+/* DARK THEME */
+#app.dark-theme .choose-diet-main-content {
+    background: var(--slate-800);
 }

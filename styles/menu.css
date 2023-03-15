@@ -69,10 +69,16 @@
     transition: all 0.2s ease-in-out;
 }
 
-.menu-filter .dropdown-item:hover {
-    background: var(--gray-4);
-}
-
 .menu-container .product-list {
     margin-top: 30px;
+}
+
+/* DARK THEME */
+#app.dark-theme .menu-nav > li {
+    background: var(--slate-800);
+}
+
+#app.dark-theme .menu-nav > li.active {
+    background: var(--gray-4);
+    color: var(--gray-1);
 }

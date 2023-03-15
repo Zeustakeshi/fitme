@@ -155,3 +155,20 @@
         transform: scale(1.1);
     }
 }
+
+/* DARK THEME */
+
+#app.dark-theme .banner-text-line-1::after {
+    border-top: 2px solid var(--gray-4);
+    border-left: 2px solid var(--gray-4);
+}
+
+#app.dark-theme .banner-text-line3::after {
+    border-top: 2px solid var(--gray-4);
+    border-right: 2px solid var(--gray-4);
+}
+
+#app.dark-theme .button-watch-video {
+    background: var(--slate-900);
+    color: var(--gray-4);
+}

@@ -79,3 +79,12 @@
     width: 100%;
     margin-top: 20px;
 }
+
+/* DARK THEME */
+#app.dark-theme .product-item:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#app.dark-theme .product-item-kcal-list > li {
+    background: var(--slate-800);
+}

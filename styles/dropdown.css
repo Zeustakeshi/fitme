@@ -45,6 +45,10 @@
     display: none;
 }
 
+.dropdown-item:hover {
+    background: var(--gray-4);
+}
+
 .dropdown > input:checked ~ .dropdown-list {
     display: block;
     animation: showDropdown 0.2s ease-in-out forwards;
@@ -52,6 +56,20 @@
 
 .dropdown > input:checked ~ .dropdown-select .dropdown-value-icon {
     transform: rotate(180deg);
+}
+
+/* DARK THEME */
+#app.dark-theme .dropdown-select {
+    border: none;
+    background: var(--slate-800);
+}
+
+#app.dark-theme .dropdown-list {
+    background: var(--slate-800);
+}
+
+#app.dark-theme .dropdown-item:hover {
+    background: var(--slate-700);
 }
 
 @keyframes showDropdown {

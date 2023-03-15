@@ -1,0 +1,45 @@
+.custom-check-box {
+    position: relative;
+    --circle-size: 24px;
+    --padding: 4px;
+    display: block;
+    min-width: calc(var(--circle-size) * 2 + var(--padding));
+    border-radius: 100rem;
+    padding: var(--padding);
+    cursor: pointer;
+}
+
+.custom-check-box-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--gray-4);
+    z-index: -1;
+    transition: all 0.2s linear;
+}
+
+.custom-check-box > input {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.custom-check-box-circle {
+    width: var(--circle-size);
+    height: var(--circle-size);
+    background: var(--white);
+    border-radius: 100rem;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.custom-check-box > input:checked ~ .custom-check-box-circle {
+    transform: translateX(calc(var(--circle-size) - var(--padding)));
+}
+
+.custom-check-box > input:checked ~ .custom-check-box-background {
+    background: var(--primary-1);
+}

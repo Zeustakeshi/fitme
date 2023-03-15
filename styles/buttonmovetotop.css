@@ -5,9 +5,10 @@
     right: 100px;
     width: 50px;
     height: 50px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    background: var(--primary-1);
-    color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+        rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    background: var(--white);
+    color: var(--primary-1);
     padding: 10px;
     border-radius: 8px;
     cursor: pointer;
@@ -16,4 +17,11 @@
 
 #move-to-top:hover {
     opacity: 0.8;
+}
+
+/* DARK THEME */
+
+#app.dark-theme #move-to-top {
+    background: var(--slate-700);
+    color: var(--primary-1);
 }
