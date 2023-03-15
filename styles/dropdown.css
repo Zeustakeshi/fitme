@@ -32,6 +32,7 @@
 }
 
 .dropdown-list {
+    overflow: hidden;
     cursor: pointer;
     position: absolute;
     top: 0;

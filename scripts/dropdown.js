@@ -1,5 +1,5 @@
 export default class Dropdown {
-    constructor(element) {
+    constructor(element, defaultValue) {
         this.element = element;
         this.toggle = this.element.querySelector(".dropdown-toggle");
         this.activeItem = this.element.querySelector(
@@ -9,13 +9,14 @@ export default class Dropdown {
         this.dropdownItems = [
             ...this.dropdownList.querySelectorAll(".dropdown-item"),
         ];
+        this.defaultValue = defaultValue;
+        this.value = defaultValue;
+        this.setActiveItem(defaultValue);
         this.eventhandler();
     }
 
     eventhandler() {
-        this.toggle.addEventListener("change", (e) => {});
         this.dropdownItems.forEach((dropdownItem) => {
-            // console.log(dropdownItem);
             dropdownItem.addEventListener("click", (e) => {
                 this.setActiveItem(dropdownItem.textContent);
             });
@@ -23,7 +24,8 @@ export default class Dropdown {
     }
 
     setActiveItem(value) {
-        if (!value && value.trim() === "") return;
+        if (!value || value.trim() === "") return;
         this.activeItem.textContent = value;
+        this.value = value;
     }
 }

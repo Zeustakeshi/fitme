@@ -7,6 +7,4 @@ class HomePage extends App {
     }
 }
 
-window.addEventListener("load", () => {
-    const app = new HomePage();
-});
+const app = new HomePage();

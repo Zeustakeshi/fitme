@@ -98,6 +98,7 @@
                                     id="woman"
                                     name="gender"
                                     checked
+                                    class="form-field"
                                 />
                                 <span class="gender-field-icon">
                                     <svg
@@ -117,7 +118,12 @@
                                 <span class="gender-field-label">Woman</span>
                             </label>
                             <label for="man" class="gender-field">
-                                <input type="radio" id="man" name="gender" />
+                                <input
+                                    type="radio"
+                                    id="man"
+                                    name="gender"
+                                    class="form-field"
+                                />
                                 <span class="gender-field-icon">
                                     <svg
                                         width="26"
@@ -151,6 +157,7 @@
                                     max="80"
                                     min="10"
                                     required
+                                    class="form-field"
                                 />
                             </label>
                             <label
@@ -232,6 +239,7 @@
                                     min="20"
                                     value="50"
                                     required
+                                    class="form-field"
                                 />
                             </label>
                             <label for="height" class="input-group-field">
@@ -246,47 +254,16 @@
                                     min="120"
                                     value="160"
                                     required
+                                    class="form-field"
                                 />
                             </label>
                         </div>
-                        <button class="button-calculate">Calculate</button>
+                        <button class="button-calculate" type="submit">
+                            Calculate
+                        </button>
                     </form>
                     <div class="calculator-result">
-                        <table>
-                            <tr>
-                                <th>Activity Level</th>
-                                <th>Calorie</th>
-                            </tr>
-                            <tr>
-                                <td>Sedentary: little or no exercise</td>
-                                <td>1.287</td>
-                            </tr>
-                            <tr>
-                                <td>Exercise 1-3 times/week</td>
-                                <td>1.287</td>
-                            </tr>
-                            <tr>
-                                <td>Exercise 4-5 times/week</td>
-                                <td>1.287</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Daily exercise or intense exercise 3-4
-                                    times/week
-                                </td>
-                                <td>1.287</td>
-                            </tr>
-                            <tr>
-                                <td>Intense exercise 6-7 times/week</td>
-                                <td>1.287</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Very intense exercise daily, or physical job
-                                </td>
-                                <td>1.287</td>
-                            </tr>
-                        </table>
+                        <div class="table-result"></div>
                         <div class="calculator-result-more">
                             <p>
                                 <span>Exercise: </span>
