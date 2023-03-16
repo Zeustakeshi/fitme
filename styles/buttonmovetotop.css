@@ -14,14 +14,24 @@
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
-
+/* 
 #move-to-top:hover {
     opacity: 0.8;
-}
+} */
 
 /* DARK THEME */
 
 #app.dark-theme #move-to-top {
     background: var(--slate-700);
     color: var(--primary-1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+    #move-to-top {
+        bottom: 40px;
+        right: 40px;
+        width: 45px;
+        height: 45px;
+    }
 }

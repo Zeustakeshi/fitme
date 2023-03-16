@@ -13,3 +13,10 @@
     line-height: 19px;
     text-transform: uppercase;
 }
+
+/* RESPOSIVE */
+@media (max-width: 767px) {
+    .nav-list {
+        display: none;
+    }
+}

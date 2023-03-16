@@ -71,3 +71,10 @@
 #app.dark-theme .choose-diet-main-content {
     background: var(--slate-800);
 }
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+    #choose-diet {
+        display: none;
+    }
+}

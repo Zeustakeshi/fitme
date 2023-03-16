@@ -46,3 +46,14 @@
 #app.dark-theme .button-register {
     background: var(--gray-1);
 }
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+    .button-cart {
+        width: 35px;
+        height: 35px;
+    }
+    .button-register {
+        padding: 8px 20px;
+    }
+}

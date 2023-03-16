@@ -43,3 +43,12 @@
 .custom-check-box > input:checked ~ .custom-check-box-background {
     background: var(--primary-1);
 }
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+    .custom-check-box {
+        position: relative;
+        --circle-size: 18px;
+        --padding: 4px;
+    }
+}

@@ -138,3 +138,103 @@
     right: -30px;
     transform: translateY(-50%);
 }
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+    #reviews {
+        gap: 60px;
+    }
+
+    .reviews-left {
+        flex: 1;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .reviews-title {
+        font-size: 22px;
+        line-height: 42px;
+        margin-bottom: 64px;
+    }
+
+    .reviews-title-line-1 {
+        justify-content: start;
+    }
+
+    .reviews-title-line-2 {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .reviews-title-line-2 > span {
+        width: 80px;
+    }
+
+    .reviews-quote {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .reviews-quote-head {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: var(--gray-2);
+    }
+
+    .customer-review-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .customer-review-item {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .customer-review-item .rating-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .customer-review-content {
+        background: var(--gray-4);
+        border-radius: 24px;
+        padding: 16px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+
+    .customer-review-content > span {
+        position: relative;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: 20px;
+    }
+
+    .customer-review-content > span::after {
+        content: "";
+        position: absolute;
+        width: 22px;
+        height: 2px;
+        background: var(--gray-1);
+        top: 50%;
+        right: -30px;
+        transform: translateY(-50%);
+    }
+}

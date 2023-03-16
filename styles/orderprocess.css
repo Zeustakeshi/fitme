@@ -152,3 +152,129 @@
 #app.dark-theme .order-process-item-icon {
     background: var(--white);
 }
+
+/* RESPOSIVE */
+@media (max-width: 767px) {
+    #order-process {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-wrap: wrap;
+        gap: 0px;
+    }
+
+    .order-process-left {
+        flex: 1;
+        min-width: 100%;
+    }
+
+    .order-process-left-title-line-1 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 50px;
+    }
+
+    .order-process-left-title-line-2 {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 50px;
+        gap: 20px;
+    }
+
+    .order-process-left-body {
+        margin-top: 40px;
+        position: relative;
+        height: 200px;
+    }
+
+    .order-process-left-body span:first-child {
+        bottom: -79px;
+        left: 30px;
+        width: 206px;
+        height: 300px;
+    }
+    .order-process-left-body span:last-child {
+        position: absolute;
+        top: -23px;
+        left: 172px;
+        width: 122px;
+    }
+
+    .order-process-right {
+        flex: 1;
+    }
+
+    .order-process-right-head {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .order-process-right-body {
+        margin-top: 0px;
+    }
+
+    .order-process-list {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .order-process-item {
+        --color: var(--primary-1);
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+    }
+
+    .order-process-item-number {
+        flex: 2;
+        position: relative;
+    }
+
+    .order-process-item-info {
+        gap: 10px;
+    }
+
+    .order-process-item-icon {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+        border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+
+    .order-process-item-icon > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .order-process-item-content {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .order-process-item-title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        width: 100%;
+    }
+    .order-process-item-desc {
+        display: none;
+    }
+}

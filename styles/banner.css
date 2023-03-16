@@ -172,3 +172,85 @@
     background: var(--slate-900);
     color: var(--gray-4);
 }
+
+/* RESPOSIVE */
+@media (max-width: 767px) {
+    #banner {
+        padding: 20px;
+        margin: 25px auto;
+    }
+
+    .banner-main-text {
+        gap: 20px;
+        font-weight: 600;
+        font-size: 26px;
+    }
+
+    .banner-text-line2 {
+        gap: 8px;
+    }
+
+    .banner-text-line2 > span {
+        padding: 10px 20px;
+        border-radius: 20px;
+    }
+
+    .banner-text-line2 > span img {
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+    }
+
+    .banner-text-line3 {
+        gap: 8px;
+    }
+
+    .banner-text-line3 > span {
+        padding: 0px 0px;
+        border-radius: 20px;
+    }
+
+    .banner-text-line3 > span img {
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+    }
+    .banner-desc {
+        display: none;
+    }
+
+    .banner-action {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .button-watch-video {
+        display: none;
+    }
+
+    .button-watch-video-icon {
+        background: var(--gray-3);
+        width: 40px;
+        height: 40px;
+        border-radius: 100rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s linear;
+        animation: button-watch-video-scale 0.8s infinite alternate
+            cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .button-watch-video::after {
+        content: "Watch wideo";
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        width: 100px;
+        transform: translateY(-50%);
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+    }
+}

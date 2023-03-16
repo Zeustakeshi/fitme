@@ -67,3 +67,6 @@
 #app.dark-theme #footer {
     background: var(--slate-800);
 }
+/* RESPOSIVE */
+@media (max-width: 767px) {
+}

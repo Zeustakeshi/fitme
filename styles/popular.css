@@ -9,3 +9,10 @@
     font-size: 38px;
     line-height: 62px;
 }
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+    #popular {
+        display: none;
+    }
+}
