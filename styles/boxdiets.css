@@ -11,11 +11,10 @@
 
 .boxdiets-list {
     margin-top: 65px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    row-gap: 20px;
+    column-gap: 20px;
 }
 
 .boxdiets-item {
@@ -54,6 +53,9 @@
 
 /* RESPONSIVE */
 @media (max-width: 767px) {
+    .boxdiets-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
     .boxdiets-title {
         font-weight: 700;
         font-size: 24px;
@@ -61,5 +63,10 @@
     }
     .boxdiets-item-desc {
         display: none;
+    }
+
+    .boxdiets-item-icon {
+        flex: 1;
+        min-height: 120px;
     }
 }

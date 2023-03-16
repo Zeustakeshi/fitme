@@ -82,3 +82,63 @@
     background: var(--gray-4);
     color: var(--gray-1);
 }
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+    .menu-head {
+        font-size: 24px;
+        line-height: 42px;
+        margin-top: 40px;
+    }
+
+    .menu-container {
+        margin-top: 20px;
+    }
+
+    .menu-control {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    .menu-nav {
+        display: none;
+    }
+
+    .menu-filter {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 0px;
+        min-width: 280px;
+    }
+
+    .menu-filter-label {
+        flex: 1;
+        display: none;
+    }
+    .menu-filter .dropdown {
+        max-width: 150px;
+        border-radius: 12px;
+    }
+
+    .menu-filter .dropdown-value {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--gray-2);
+    }
+
+    .menu-filter .dropdown-list {
+        border-radius: 8px;
+    }
+
+    .menu-filter .dropdown-item {
+        padding: 20px 16px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .menu-container .product-list {
+        margin-top: 30px;
+    }
+}

@@ -11,10 +11,9 @@ export default class App {
             ".button-change-theme",
             this.theme === "dark" ? "checked" : ""
         );
+        this.header = new Header(this.rootElement);
         this.buttonChangeTheme.onChange(this.handleChangeTheme.bind(this));
         this.setTheme();
-
-        this.header = new Header(this.rootElement);
     }
 
     handleChangeTheme(e) {

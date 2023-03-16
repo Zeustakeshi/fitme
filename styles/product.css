@@ -1,10 +1,14 @@
 .product-list {
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
     margin-bottom: 40px;
-    gap: 40px 20px;
+    /* gap: 40px 20px; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    row-gap: 40px;
+    column-gap: 20px;
 }
 
 .product-item {
@@ -14,6 +18,7 @@
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     transition: all 0.25s linear;
+    margin: 0 auto;
 }
 
 .product-item:hover {

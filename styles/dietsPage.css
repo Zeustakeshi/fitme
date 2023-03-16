@@ -5,3 +5,12 @@
     margin-bottom: 40px;
     margin-top: 80px;
 }
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+    .gallery-title {
+        margin-top: 60px;
+        font-size: 30px;
+        line-height: 50px;
+    }
+}

@@ -10,7 +10,7 @@ export default class Login {
     }
 
     eventhandler() {
-        this.buttonLogin.addEventListener("click", () => {
+        this.buttonLogin?.addEventListener("click", () => {
             this.modal.showModal();
         });
     }

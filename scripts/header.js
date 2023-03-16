@@ -6,7 +6,7 @@ export default class Header {
         this.rootElement = rootElement;
         this.element = document.getElementById("header");
         this.buttonShowCart = this.element.querySelector(".button-cart");
-        this.buttonLogin = this.element.querySelector("#button-register");
+        this.buttonLogin = this.element.querySelector("#button-login");
         this.login = new Login(this.rootElement, this.buttonLogin);
     }
 }

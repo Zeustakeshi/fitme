@@ -236,17 +236,9 @@
 }
 
 .infomation-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    gap: 80px;
-}
-
-.infamation-content {
-    flex: 1;
-}
-.infomation-result {
-    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 80px;
 }
 
 .infomation-title {
@@ -285,4 +277,119 @@
 
 #app.dark-theme .having-doubts {
     background: var(--slate-800);
+}
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+    #calorie-calculator {
+        margin-top: 50px;
+    }
+
+    .calorie-calculator-title {
+        font-size: 24px;
+        line-height: 42px;
+        margin-bottom: 32px;
+    }
+
+    .calculator-options {
+        display: none;
+    }
+
+    .calculator-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .calculator-form {
+        flex: 1;
+    }
+
+    .gender-group {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 60px;
+        flex-wrap: wrap;
+    }
+
+    .input-group {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .input-group-field {
+        width: 100%;
+    }
+
+    .input-group-field > input {
+        padding: 12px 20px;
+    }
+
+    .input-group-field > input:focus {
+        border-color: var(--gray-2);
+    }
+
+    .input-group-field:nth-child(odd) {
+        grid-column: span 1 / span 1;
+    }
+
+    .input-group-field:nth-child(even) {
+        grid-column: span 1 / span 1;
+    }
+
+    .input-group-field-label {
+        font-weight: 500;
+    }
+
+    .dropdown-activity-level {
+        padding: 12px 20px;
+        max-width: 100%;
+    }
+
+    .dropdown-value {
+        max-width: 200px;
+    }
+
+    .dropdown-list-active-level > .dropdown-item {
+        padding: 16px;
+    }
+
+    .calculator-result-more {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    .calculator-result-more > p > span:first-child {
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .are-you-having-doubts {
+        display: none;
+    }
+
+    .infomation-wrapper {
+        row-gap: 20px;
+    }
+
+    .infomation-title {
+        text-align: center;
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 62px;
+    }
+
+    #infomation p {
+        margin: 20px 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--gray-2);
+        text-align: justify;
+    }
 }
