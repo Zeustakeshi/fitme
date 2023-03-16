@@ -1,5 +1,6 @@
 import ButtonMoveToTop from "./buttonMoveToTop.js";
 import CheckBox from "./checkbox.js";
+import Header from "./header.js";
 
 export default class App {
     constructor() {
@@ -12,6 +13,8 @@ export default class App {
         );
         this.buttonChangeTheme.onChange(this.handleChangeTheme.bind(this));
         this.setTheme();
+
+        this.header = new Header(this.rootElement);
     }
 
     handleChangeTheme(e) {

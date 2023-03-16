@@ -29,6 +29,10 @@ textarea {
     outline: none;
 }
 
+#app.dark-theme input::placeholder {
+    color: var(--gray-2);
+}
+
 button {
     cursor: pointer;
     transition: all 0.25s ease-in-out;
