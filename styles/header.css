@@ -50,6 +50,6 @@
 /* RESPONSIVE */
 @media (max-width: 767px) {
     .header-action {
-        display: none;
+        /* display: none; */
     }
 }
