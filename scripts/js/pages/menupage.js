@@ -1,5 +1,5 @@
-import App from "./app.js";
-import Dropdown from "./dropdown.js";
+import App from "../layouts/app.js";
+import Dropdown from "../components/dropdown.js";
 
 class MenuPage extends App {
     constructor() {

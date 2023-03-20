@@ -1,4 +1,4 @@
-import Modal from "../modal.js";
+import Modal from "../components/modal.js";
 
 export default class Login {
     constructor(rootElement, buttonLoginElement) {
@@ -58,13 +58,13 @@ export default class Login {
             <div class="different-opiton-auth">
                 <button class="auth-with-google">
                     <span>
-                        <img src="./assets/google.png" alt="" />
+                        <img src="../assets/google.png" alt="" />
                     </span>
                     <span>Login with google</span>
                 </button>
                 <button class="auth-with-apple">
                     <span>
-                        <img src="./assets/apple.png" alt="" />
+                        <img src="../assets/apple.png" alt="" />
                     </span>
                     <span>Login with apple</span>
                 </button>

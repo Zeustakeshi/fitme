@@ -1,5 +1,5 @@
-import Modal from "./modal.js";
-import VideoYoutube from "./videoYoutube.js";
+import Modal from "../components/modal.js";
+import VideoYoutube from "../components/videoYoutube.js";
 
 export default class Banner {
     constructor(rootElement) {

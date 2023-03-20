@@ -1,5 +1,5 @@
-import App from "./app.js";
-import Banner from "./banner.js";
+import App from "../layouts/app.js";
+import Banner from "../layouts/banner.js";
 class HomePage extends App {
     constructor() {
         super();

@@ -23,6 +23,9 @@
         <link rel="stylesheet" href="../styles/choosediet.css" />
         <link rel="stylesheet" href="../styles/buttonmovetotop.css" />
         <link rel="stylesheet" href="../styles/customcheckbox.css" />
+        <link rel="stylesheet" href="../styles/modal.css" />
+        <link rel="stylesheet" href="../styles/auth.css" />
+
         <!-- TITLE -->
         <title>Calorie-calculator</title>
     </head>
@@ -32,7 +35,7 @@
             <header id="header">
                 <div class="header-wrapper app-container">
                     <div class="logo">
-                        <a href="/">
+                        <a href="/pages/index.html">
                             <img
                                 class="logo-image"
                                 src="../assets/logo.svg"
@@ -89,7 +92,7 @@
                                 />
                             </svg>
                         </div>
-                        <button id="button-register" class="button-register">
+                        <button id="button-login" class="button-register">
                             Sign In
                         </button>
                     </div>
@@ -540,6 +543,6 @@
                 waitUntilVisible: true,
             }).go();
         </script>
-        <script src="../scripts/caloriepage.js" type="module"></script>
+        <script src="../scripts/js/pages/caloriepage.js" type="module"></script>
     </body>
 </html>

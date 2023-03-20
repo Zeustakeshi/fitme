@@ -1,5 +1,4 @@
-import Login from "./auth/login.js";
-import Tooltip from "./tooltip.js";
+import Login from "../auth/login.js";
 
 export default class Header {
     constructor(rootElement) {

@@ -1,4 +1,4 @@
-import App from "./app.js";
+import App from "../layouts/app.js";
 
 class DietsPage extends App {
     constructor() {

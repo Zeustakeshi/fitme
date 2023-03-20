@@ -112,6 +112,7 @@ body::-webkit-scrollbar {
     color: var(--gray-1);
     background: var(--white);
     transition: all 0.2s linear;
+    min-height: 100vh;
 }
 
 #app.dark-theme {

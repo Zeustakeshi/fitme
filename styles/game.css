@@ -1,0 +1,17 @@
+#game-wrapper {
+    position: relative;
+    min-height: 80vh;
+}
+
+canvas.canvas-game {
+    font-family: "Bangers", cursive;
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../assets/AdventureEgg/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

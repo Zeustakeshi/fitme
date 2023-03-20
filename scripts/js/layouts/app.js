@@ -1,5 +1,5 @@
-import ButtonMoveToTop from "./buttonMoveToTop.js";
-import CheckBox from "./checkbox.js";
+import ButtonMoveToTop from "../components/buttonMoveToTop.js";
+import CheckBox from "../components/checkbox.js";
 import Header from "./header.js";
 
 export default class App {

@@ -1,7 +1,7 @@
-import App from "./app.js";
-import Dropdown from "./dropdown.js";
-import Form from "./form.js";
-import Table from "./table.js";
+import App from "../layouts/app.js";
+import Dropdown from "../components/dropdown.js";
+import Form from "../components/form.js";
+import Table from "../components/table.js";
 
 const activityItems = [
     {
