@@ -53,7 +53,7 @@ export default class AdventureEgg implements IGame {
             y: this.gameHeight * 0.5,
             pressed: false,
         };
-        this.numberOfObstacle = 0;
+        this.numberOfObstacle = 5;
         this.numberOfEnemy = 8;
         this.maxEggs = 10;
         this.obstacles = [];
