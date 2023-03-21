@@ -1,6 +1,7 @@
 import { IEgg } from "./egg.interface";
 import { IEnemy } from "./enemy.interface";
 import { ILarva } from "./larva.interface";
+import { ILevel } from "./level.interface";
 import { IObstacle } from "./obstacle.interface";
 import { IParticle } from "./particle.interface";
 import { IPLayer } from "./player.interface";
@@ -35,6 +36,7 @@ export interface IGame {
     hatchlings: ILarva[];
     particles: IParticle[];
     gameObjects: IGameObject[];
+    levels: ILevel[];
     fps: number;
     timer: number;
     interval: number;
@@ -46,8 +48,11 @@ export interface IGame {
     };
 
     gameover: boolean;
+    level: number;
     score: number;
+    distanceScore: number;
     winningScore: number;
     lostHatchlings: number;
+
     checkCollision: (a: IGameObject, b: IGameObject) => TCheckCollisionValue;
 }

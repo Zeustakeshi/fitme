@@ -2,6 +2,7 @@ import Egg from "./egg.js";
 import Obstacle from "./obstacle.js";
 import Player from "./player.js";
 import Enemy from "./enemy.js";
+import levelData from "./levelData.js";
 export default class AdventureEgg {
     //public
     canvas;
@@ -15,6 +16,7 @@ export default class AdventureEgg {
     hatchlings;
     gameObjects;
     particles;
+    levels;
     marginTop;
     fps;
     timer;
@@ -24,13 +26,16 @@ export default class AdventureEgg {
     score;
     winningScore;
     gameover;
+    level;
     player;
+    distanceScore;
     // private
     numberOfObstacle;
     numberOfEnemy;
     maxEggs;
     eggTimer;
     eggInterval;
+    isWinning;
     constructor(canvas) {
         this.debug = false;
         this.canvas = canvas;
@@ -43,9 +48,12 @@ export default class AdventureEgg {
             y: this.gameHeight * 0.5,
             pressed: false,
         };
-        this.numberOfObstacle = 5;
-        this.numberOfEnemy = 8;
-        this.maxEggs = 10;
+        this.levels = levelData;
+        this.level = 0;
+        this.numberOfObstacle = this.levels[this.level].numberOfObstacle;
+        this.numberOfEnemy = this.levels[this.level].numberOfEnemy;
+        this.maxEggs = this.levels[this.level].maxEggs;
+        this.distanceScore = this.levels[this.level].distanceScore;
         this.obstacles = [];
         this.eggs = [];
         this.enemies = [];
@@ -53,9 +61,10 @@ export default class AdventureEgg {
         this.particles = [];
         this.gameObjects = [];
         this.score = 0;
-        this.winningScore = 100;
+        this.winningScore = this.levels[this.level].winningScore;
         this.lostHatchlings = 0;
         this.gameover = false;
+        this.isWinning = false;
         this.fps = 30;
         this.timer = 0;
         this.interval = 1000 / this.fps;
@@ -81,9 +90,11 @@ export default class AdventureEgg {
         };
     }
     init() {
+        // init enemies
         for (let i = 0; i < this.numberOfEnemy; ++i) {
             this.addEnemy();
         }
+        // init obstacles
         let attempt = 0;
         while (this.obstacles.length < this.numberOfObstacle && attempt < 500) {
             let testObstacle = new Obstacle(this);
@@ -141,8 +152,11 @@ export default class AdventureEgg {
             if (e.key === "d") {
                 this.debug = !this.debug;
             }
-            else if (e.key === " " && this.gameover) {
+            else if (e.key === "r" && this.gameover) {
                 this.onStartGame();
+            }
+            else if (e.key === "n" && this.gameover && this.isWinning) {
+                this.onNextLevel();
             }
         });
     }
@@ -153,10 +167,19 @@ export default class AdventureEgg {
         this.enemies.push(new Enemy(this));
     }
     drawStatusText() {
-        this.ctx.fillText(`Score: ${this.score}`, 25, 50);
-        this.ctx.fillText(`Lost : ${this.lostHatchlings}`, 25, 80);
+        this.ctx.save();
+        this.ctx.font = "bold 32px Bangers";
+        this.ctx.fillText(`Score:`, 25, 50);
+        this.ctx.fillText(`Lost :`, 25, 85);
+        this.ctx.font = "bold 30px Bangers";
+        this.ctx.fillText(`${this.score}`, 125, 50);
+        this.ctx.fillText(`${this.lostHatchlings}`, 125, 85);
+        this.ctx.font = "bold 50px Bangers";
+        this.ctx.fillText(`Level:`, this.gameWidth * 0.5 - 50, 50);
+        this.ctx.fillText(`${this.levels[this.level].level}`, this.gameWidth * 0.5 + 100, 50);
+        this.ctx.restore();
         // win - lose message
-        if (this.score > this.winningScore) {
+        if (this.score >= this.winningScore) {
             this.gameover = true;
             this.ctx.save();
             this.ctx.fillStyle = "rgba(0, 0, 0, 0.7)";
@@ -166,17 +189,19 @@ export default class AdventureEgg {
             let message1 = "";
             let message2 = "";
             let message3 = "";
-            if (this.winningScore - this.lostHatchlings > 20) {
+            if (this.winningScore - this.lostHatchlings > this.distanceScore) {
                 // win
+                this.isWinning = true;
                 message1 = "YOU WIN !";
                 message2 = `Your Score: ${this.score}`;
-                message3 = "Press SPACE to restart";
+                message3 = "Press N to next level";
             }
             else {
                 // lose
                 message1 = "YOU LOSE !";
                 message2 = `Your Score: ${this.score}`;
-                message3 = "Press SPACE to restart";
+                message3 = "Press R to restart";
+                this.isWinning = false;
             }
             this.ctx.font = "bold 100px Bangers";
             this.ctx.fillText(message1, this.gameWidth * 0.5, this.gameHeight * 0.5);
@@ -188,9 +213,14 @@ export default class AdventureEgg {
         }
     }
     resetGame() {
+        this.level = 0;
+        this.numberOfEnemy = this.levels[this.level].numberOfEnemy;
+        this.numberOfObstacle = this.levels[this.level].numberOfObstacle;
+        this.winningScore = this.levels[this.level].winningScore;
         this.score = 0;
         this.lostHatchlings = 0;
         this.gameover = false;
+        this.isWinning = false;
         this.obstacles = [];
         this.eggs = [];
         this.enemies = [];
@@ -198,10 +228,20 @@ export default class AdventureEgg {
         this.particles = [];
         this.gameObjects = [];
         this.player.restart();
-        this.init();
     }
     onStartGame() {
         this.resetGame();
+        this.init();
+        this.update(0);
+    }
+    onNextLevel() {
+        const prevLevel = this.level;
+        this.resetGame();
+        this.level = prevLevel + 1;
+        this.numberOfEnemy = this.levels[this.level].numberOfEnemy;
+        this.numberOfObstacle = this.levels[this.level].numberOfObstacle;
+        this.winningScore = this.levels[this.level].winningScore;
+        this.init();
         this.update(0);
     }
     removeGameObjects() {
