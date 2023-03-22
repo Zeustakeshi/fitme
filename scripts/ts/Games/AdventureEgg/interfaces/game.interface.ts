@@ -2,7 +2,7 @@ import { IEgg } from "./egg.interface";
 import { IEnemy } from "./enemy.interface";
 import { ILarva } from "./larva.interface";
 import { ILevel } from "./level.interface";
-import { IObstacle } from "./obstacle.interface";
+import { IObstacle, ISanctuary } from "./obstacle.interface";
 import { IParticle } from "./particle.interface";
 import { IPLayer } from "./player.interface";
 
@@ -31,6 +31,7 @@ export interface IGame {
     gameHeight: number;
     marginTop: number;
     obstacles: IObstacle[];
+    sanctuarys: ISanctuary[];
     eggs: IEgg[];
     enemies: IEnemy[];
     hatchlings: ILarva[];

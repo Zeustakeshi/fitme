@@ -7,10 +7,15 @@ export interface IObstacle extends IGameObject {
     collisionRadius: number;
     spriteWidth: number;
     spriteHeight: number;
+    scale: number;
     spriteX: number;
     spriteY: number;
     width: number;
     height: number;
     frameX: number;
     frameY: number;
+}
+
+export interface ISanctuary extends IObstacle {
+    safeAreaRadius: number;
 }

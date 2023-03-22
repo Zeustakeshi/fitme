@@ -146,19 +146,21 @@ export default class Player implements IPLayer {
         this.collisionY += this.speedY * this.speedModifier;
 
         //check collision with obstacles
-        this.game.obstacles.forEach((obstacle) => {
-            const { distance, dx, dy, isCollision, sumOfRadius } =
-                this.game.checkCollision(this, obstacle);
+        [...this.game.obstacles, ...this.game.sanctuarys].forEach(
+            (obstacle) => {
+                const { distance, dx, dy, isCollision, sumOfRadius } =
+                    this.game.checkCollision(this, obstacle);
 
-            if (isCollision) {
-                const unitX = dx / distance;
-                const unitY = dy / distance;
-                this.collisionX =
-                    obstacle.collisionX + (sumOfRadius + 1) * unitX;
-                this.collisionY =
-                    obstacle.collisionY + (sumOfRadius + 1) * unitY;
+                if (isCollision) {
+                    const unitX = dx / distance;
+                    const unitY = dy / distance;
+                    this.collisionX =
+                        obstacle.collisionX + (sumOfRadius + 1) * unitX;
+                    this.collisionY =
+                        obstacle.collisionY + (sumOfRadius + 1) * unitY;
+                }
             }
-        });
+        );
 
         // horizontal boundaries
         if (this.collisionX + this.collisionRadius > this.game.gameWidth) {

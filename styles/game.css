@@ -1,6 +1,10 @@
 #game-wrapper {
     position: relative;
-    min-height: 80vh;
+    min-height: 100vh;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }
 
 canvas.canvas-game {
@@ -14,4 +18,190 @@ canvas.canvas-game {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.game-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1280px;
+    height: 720px;
+    background: #000;
+}
+
+.button-fullscreen {
+    padding: 20px;
+    z-index: 3;
+    background: var(--primary-1);
+    font-weight: 600;
+    color: var(--white);
+    font-size: 18px;
+    border-radius: 12px;
+}
+
+.button-start-game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 100rem;
+    padding: 20px;
+    background: var(--primary-1);
+    color: var(--white);
+    z-index: 5;
+}
+.button-start-game.hidden {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+}
+
+/* Game INFO */
+#game-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 80px;
+}
+
+#game-info .game-name {
+    font-size: 60px;
+    font-weight: 600;
+    font-family: "Bangers", cursive;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.game-info-container {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    row-gap: 40px;
+    column-gap: 20px;
+    margin-bottom: 80px;
+}
+
+.game-info-card-wrapper {
+    max-width: 345px;
+}
+
+.game-info-card {
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.2s linear;
+    transform-style: preserve-3d;
+    height: 500px;
+}
+
+.game-info-card-back,
+.game-info-card-front {
+    background: var(--white);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.game-info-card-front {
+    z-index: 2;
+}
+
+.game-info-card-back {
+    transform: rotateY(180deg);
+    justify-content: start;
+}
+
+.game-info-card-wrapper:hover .game-info-card {
+    transform: rotateY(180deg);
+}
+
+.game-info-card-wrapper:hover .game-info-card-front {
+    display: none;
+}
+
+.game-info-img {
+    width: 100%;
+    height: 200px;
+}
+
+.game-info-img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.character-info {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.character-info-name {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.character-info-desc {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.choose-diet-main-content--show-decorations::before {
+    background-image: url("../assets/AdventureEgg/larva-girl.png");
+    height: 80%;
+    top: 50%;
+    transform: translateY(-50%) rotateY(180deg);
+}
+
+.choose-diet-main-content--show-decorations::after {
+    background-image: url("../assets/AdventureEgg/larva_crawl.png");
+    height: 80%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.button-choose-diet {
+    padding: 0;
+}
+
+.button-choose-diet > a {
+    padding: 12px 20px;
+}
+
+/* DARK THEME */
+#app.dark-theme .button-start-game {
+    background: var(--secondary-2);
+}
+
+#app.dark-theme .button-fullscreen {
+    background: var(--secondary-2);
+}
+
+#app.dark-theme .game-info-card {
+    background: var(--slate-800);
+}
+
+#app.dark-theme .game-info-card-back,
+#app.dark-theme .game-info-card-front {
+    background: var(--slate-800);
 }

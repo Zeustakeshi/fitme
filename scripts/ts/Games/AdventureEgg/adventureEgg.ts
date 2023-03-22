@@ -1,9 +1,9 @@
 import { IEgg } from "./interfaces/egg.interface";
 import { IGame, IGameObject } from "./interfaces/game.interface";
-import { IObstacle } from "./interfaces/obstacle.interface";
+import { IObstacle, ISanctuary } from "./interfaces/obstacle.interface";
 import { IPLayer } from "./interfaces/player.interface";
 import Egg from "./egg.js";
-import Obstacle from "./obstacle.js";
+import Obstacle, { Sanctuary } from "./obstacle.js";
 import Player from "./player.js";
 import { IEnemy } from "./interfaces/enemy.interface";
 import Enemy from "./enemy.js";
@@ -25,6 +25,7 @@ export default class AdventureEgg implements IGame {
     hatchlings: ILarva[];
     gameObjects: IGameObject[];
     particles: IParticle[];
+    sanctuarys: ISanctuary[];
     levels: ILevel[];
     marginTop: number;
     fps: number;
@@ -42,6 +43,7 @@ export default class AdventureEgg implements IGame {
     // private
     private numberOfObstacle: number;
     private numberOfEnemy: number;
+    private numberOfSanctuary: number;
     private maxEggs: number;
     private eggTimer: number;
     private eggInterval: number;
@@ -53,7 +55,7 @@ export default class AdventureEgg implements IGame {
         this.ctx = this.canvas.getContext("2d") as CanvasRenderingContext2D;
         this.gameWidth = this.canvas.width = 1280;
         this.gameHeight = this.canvas.height = 720;
-        this.marginTop = 200;
+        this.marginTop = this.gameHeight * 0.3;
         this.mouse = {
             x: this.gameWidth * 0.5,
             y: this.gameHeight * 0.5,
@@ -64,6 +66,7 @@ export default class AdventureEgg implements IGame {
         this.level = 0;
         this.numberOfObstacle = this.levels[this.level].numberOfObstacle;
         this.numberOfEnemy = this.levels[this.level].numberOfEnemy;
+        this.numberOfSanctuary = this.levels[this.level].numberOfSanctuary;
         this.maxEggs = this.levels[this.level].maxEggs;
         this.distanceScore = this.levels[this.level].distanceScore;
 
@@ -72,6 +75,7 @@ export default class AdventureEgg implements IGame {
         this.enemies = [];
         this.hatchlings = [];
         this.particles = [];
+        this.sanctuarys = [];
         this.gameObjects = [];
 
         this.score = 0;
@@ -144,6 +148,11 @@ export default class AdventureEgg implements IGame {
             }
             attempt++;
         }
+
+        // init Sanctuary
+        for (let i = 0; i < this.numberOfSanctuary; ++i) {
+            this.sanctuarys.push(new Sanctuary(this));
+        }
     }
 
     private loadDefaultCanvasSetting() {
@@ -203,12 +212,11 @@ export default class AdventureEgg implements IGame {
         this.ctx.font = "bold 30px Bangers";
         this.ctx.fillText(`${this.score}`, 125, 50);
         this.ctx.fillText(`${this.lostHatchlings}`, 125, 85);
-
+        this.ctx.textAlign = "center";
         this.ctx.font = "bold 50px Bangers";
-        this.ctx.fillText(`Level:`, this.gameWidth * 0.5 - 50, 50);
         this.ctx.fillText(
-            `${this.levels[this.level].level}`,
-            this.gameWidth * 0.5 + 100,
+            `Level: ${this.levels[this.level].level}`,
+            this.gameWidth * 0.5,
             50
         );
 
@@ -265,6 +273,7 @@ export default class AdventureEgg implements IGame {
         this.level = 0;
         this.numberOfEnemy = this.levels[this.level].numberOfEnemy;
         this.numberOfObstacle = this.levels[this.level].numberOfObstacle;
+        this.numberOfSanctuary = this.levels[this.level].numberOfSanctuary;
         this.winningScore = this.levels[this.level].winningScore;
         this.score = 0;
         this.lostHatchlings = 0;
@@ -291,6 +300,7 @@ export default class AdventureEgg implements IGame {
         this.level = prevLevel + 1;
         this.numberOfEnemy = this.levels[this.level].numberOfEnemy;
         this.numberOfObstacle = this.levels[this.level].numberOfObstacle;
+        this.numberOfSanctuary = this.levels[this.level].numberOfSanctuary;
         this.winningScore = this.levels[this.level].winningScore;
         this.init();
         this.update(0);
@@ -320,6 +330,7 @@ export default class AdventureEgg implements IGame {
                 ...this.enemies,
                 ...this.hatchlings,
                 ...this.particles,
+                ...this.sanctuarys,
                 this.player,
             ];
             this.gameObjects.sort((a: IGameObject, b: IGameObject) => {

@@ -127,7 +127,7 @@ export default class Player {
         this.collisionX += this.speedX * this.speedModifier;
         this.collisionY += this.speedY * this.speedModifier;
         //check collision with obstacles
-        this.game.obstacles.forEach((obstacle) => {
+        [...this.game.obstacles, ...this.game.sanctuarys].forEach((obstacle) => {
             const { distance, dx, dy, isCollision, sumOfRadius } = this.game.checkCollision(this, obstacle);
             if (isCollision) {
                 const unitX = dx / distance;

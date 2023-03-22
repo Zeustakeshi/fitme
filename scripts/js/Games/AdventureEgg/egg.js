@@ -45,7 +45,7 @@ export default class Egg {
         this.frameX = 0;
         this.frameY = 0;
         this.hatchTimer = 0;
-        this.hatchInterval = 5000;
+        this.hatchInterval = this.game.levels[this.game.level].hatchTimer;
         this.makedForDeletetion = false;
     }
     draw() {

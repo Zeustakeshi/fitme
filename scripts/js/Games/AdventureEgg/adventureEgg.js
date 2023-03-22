@@ -1,5 +1,5 @@
 import Egg from "./egg.js";
-import Obstacle from "./obstacle.js";
+import Obstacle, { Sanctuary } from "./obstacle.js";
 import Player from "./player.js";
 import Enemy from "./enemy.js";
 import levelData from "./levelData.js";
@@ -16,6 +16,7 @@ export default class AdventureEgg {
     hatchlings;
     gameObjects;
     particles;
+    sanctuarys;
     levels;
     marginTop;
     fps;
@@ -32,6 +33,7 @@ export default class AdventureEgg {
     // private
     numberOfObstacle;
     numberOfEnemy;
+    numberOfSanctuary;
     maxEggs;
     eggTimer;
     eggInterval;
@@ -42,7 +44,7 @@ export default class AdventureEgg {
         this.ctx = this.canvas.getContext("2d");
         this.gameWidth = this.canvas.width = 1280;
         this.gameHeight = this.canvas.height = 720;
-        this.marginTop = 200;
+        this.marginTop = this.gameHeight * 0.3;
         this.mouse = {
             x: this.gameWidth * 0.5,
             y: this.gameHeight * 0.5,
@@ -52,6 +54,7 @@ export default class AdventureEgg {
         this.level = 0;
         this.numberOfObstacle = this.levels[this.level].numberOfObstacle;
         this.numberOfEnemy = this.levels[this.level].numberOfEnemy;
+        this.numberOfSanctuary = this.levels[this.level].numberOfSanctuary;
         this.maxEggs = this.levels[this.level].maxEggs;
         this.distanceScore = this.levels[this.level].distanceScore;
         this.obstacles = [];
@@ -59,6 +62,7 @@ export default class AdventureEgg {
         this.enemies = [];
         this.hatchlings = [];
         this.particles = [];
+        this.sanctuarys = [];
         this.gameObjects = [];
         this.score = 0;
         this.winningScore = this.levels[this.level].winningScore;
@@ -121,6 +125,10 @@ export default class AdventureEgg {
             }
             attempt++;
         }
+        // init Sanctuary
+        for (let i = 0; i < this.numberOfSanctuary; ++i) {
+            this.sanctuarys.push(new Sanctuary(this));
+        }
     }
     loadDefaultCanvasSetting() {
         this.ctx.fillStyle = "white";
@@ -174,9 +182,9 @@ export default class AdventureEgg {
         this.ctx.font = "bold 30px Bangers";
         this.ctx.fillText(`${this.score}`, 125, 50);
         this.ctx.fillText(`${this.lostHatchlings}`, 125, 85);
+        this.ctx.textAlign = "center";
         this.ctx.font = "bold 50px Bangers";
-        this.ctx.fillText(`Level:`, this.gameWidth * 0.5 - 50, 50);
-        this.ctx.fillText(`${this.levels[this.level].level}`, this.gameWidth * 0.5 + 100, 50);
+        this.ctx.fillText(`Level: ${this.levels[this.level].level}`, this.gameWidth * 0.5, 50);
         this.ctx.restore();
         // win - lose message
         if (this.score >= this.winningScore) {
@@ -216,6 +224,7 @@ export default class AdventureEgg {
         this.level = 0;
         this.numberOfEnemy = this.levels[this.level].numberOfEnemy;
         this.numberOfObstacle = this.levels[this.level].numberOfObstacle;
+        this.numberOfSanctuary = this.levels[this.level].numberOfSanctuary;
         this.winningScore = this.levels[this.level].winningScore;
         this.score = 0;
         this.lostHatchlings = 0;
@@ -240,6 +249,7 @@ export default class AdventureEgg {
         this.level = prevLevel + 1;
         this.numberOfEnemy = this.levels[this.level].numberOfEnemy;
         this.numberOfObstacle = this.levels[this.level].numberOfObstacle;
+        this.numberOfSanctuary = this.levels[this.level].numberOfSanctuary;
         this.winningScore = this.levels[this.level].winningScore;
         this.init();
         this.update(0);
@@ -262,6 +272,7 @@ export default class AdventureEgg {
                 ...this.enemies,
                 ...this.hatchlings,
                 ...this.particles,
+                ...this.sanctuarys,
                 this.player,
             ];
             this.gameObjects.sort((a, b) => {

@@ -34,8 +34,10 @@ export default class Enemy {
         this.spriteY = this.collisionY - this.height * 0.5;
         this.frameX = 0;
         this.frameY = Math.floor(Math.random() * 4);
-        this.baseSpeedX = Math.random() * 4 + 0.5;
-        this.baseSpeedY = Math.random() * 4 + 0.5;
+        this.baseSpeedX =
+            Math.random() * this.game.levels[this.game.level].enemySpeed + 0.5;
+        this.baseSpeedY =
+            Math.random() * this.game.levels[this.game.level].enemySpeed + 0.5;
         this.speedX = this.baseSpeedX;
         this.speedY = this.baseSpeedY;
     }
