@@ -114,7 +114,9 @@ class CharacterInfoCardList {
                         </div>
                     </div>
                     <div class="game-info-card-back">
-                        ${card.desc}
+                        <p>
+                            ${card.desc}
+                        </p>
                     </div>
                 </div>
             </div>`;

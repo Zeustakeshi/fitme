@@ -97,10 +97,10 @@ canvas.canvas-game {
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
     border-radius: 12px;
-    overflow: hidden;
     transition: all 0.2s linear;
     transform-style: preserve-3d;
     height: 500px;
+    overflow: hidden;
 }
 
 .game-info-card-back,
@@ -124,6 +124,18 @@ canvas.canvas-game {
 .game-info-card-back {
     transform: rotateY(180deg);
     justify-content: start;
+    overflow: auto;
+    height: 90%;
+    font-size: 20px;
+}
+
+.game-info-card-back {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.game-info-card-back::-webkit-scrollbar {
+    display: none;
 }
 
 .game-info-card-wrapper:hover .game-info-card {
