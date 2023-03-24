@@ -39,6 +39,7 @@
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 20px;
+    text-transform: capitalize;
 }
 
 .product-reviews {
@@ -157,6 +158,7 @@
 }
 
 .user-comment {
+    margin-top: 80px;
     width: 100%;
     display: flex;
     justify-content: center;

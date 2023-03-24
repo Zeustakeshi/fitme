@@ -1,5 +1,7 @@
 import App from "../layouts/app.js";
 import Dropdown from "../components/dropdown.js";
+import ProductList from "../components/productList.js";
+import { ProductData } from "../data/productData.js";
 
 class MenuPage extends App {
     constructor() {
@@ -8,19 +10,10 @@ class MenuPage extends App {
             ".menu-filter .dropdown"
         );
         this.dropdownFilter = new Dropdown(this.dropdownFilterElement);
-        this.buttonChooses = document.querySelectorAll(
-            ".product-item-button-choose"
-        );
-
-        this.evenHandler();
-    }
-
-    evenHandler() {
-        this.buttonChooses.forEach((buttonChoose) => {
-            buttonChoose.addEventListener("click", () => {
-                window.location = "../pages/productdetail.html";
-            });
-        });
+        this.data = ProductData;
+        this.productList = new ProductList(".menu-list", this.data);
+        this.productList.render();
+        this.productList.evenhandler();
     }
 }
 const app = new MenuPage();
