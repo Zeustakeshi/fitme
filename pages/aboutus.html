@@ -20,6 +20,9 @@
         <link rel="stylesheet" href="../styles/footer.css" />
         <link rel="stylesheet" href="../styles/modal.css" />
         <link rel="stylesheet" href="../styles/auth.css" />
+        <link rel="stylesheet" href="../styles/customcheckbox.css" />
+        <link rel="stylesheet" href="../styles/buttonmovetotop.css" />
+        <link rel="stylesheet" href="../styles/aboutus.css" />
 
         <!-- TITLE -->
         <title>About us</title>
@@ -42,19 +45,21 @@
                     <nav class="header-nav">
                         <ul class="nav-list">
                             <li class="nav-item">
-                                <a href="./diets.html">Diets</a>
+                                <a href="../pages/diets.html">Diets</a>
                             </li>
                             <li class="nav-item">
-                                <a href="./calorie.html">Calorie calculator</a>
+                                <a href="../pages/calorie.html"
+                                    >Calorie calculator</a
+                                >
                             </li>
                             <li class="nav-item">
-                                <a href="./menu.html">Menu</a>
+                                <a href="../pages/menu.html">Menu</a>
                             </li>
                             <li class="nav-item">
-                                <a href="./delivery.html">Delivery</a>
+                                <a href="../pages/delivery.html">Delivery</a>
                             </li>
                             <li class="nav-item">
-                                <a href="./aboutus.html">about us</a>
+                                <a href="../pages/aboutus.html">about us</a>
                             </li>
                             <li class="nav-item">
                                 <a
@@ -65,13 +70,20 @@
                                 >
                             </li>
                             <li class="nav-item">
-                                <a href="./FAQ.html">FAQ</a>
+                                <a href="../pages/game.html">Game</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../pages/FAQ.html">FAQ</a>
                             </li>
                         </ul>
                     </nav>
                     <div class="header-action">
                         <div class="button-change-theme"></div>
-                        <div id="button-cart" class="button-cart">
+                        <div
+                            id="button-cart"
+                            class="button-cart"
+                            style="position: relative"
+                        >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -86,13 +98,147 @@
                                     d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
                                 />
                             </svg>
+                            <div class="tooltip show-cart-tooltip">
+                                <!-- <span class="arrow-up"></span>
+                                <div class="tooltip-content">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Quidem facilis maiores
+                                        facere assumenda velit debitis quae
+                                        rerum neque similique corporis?
+                                    </p>
+                                </div> -->
+                            </div>
                         </div>
                         <button id="button-login" class="button-register">
                             Sign In
                         </button>
                     </div>
+                    <div class="nav-mobile">
+                        <span class="nav-mobile-icon">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="w-6 h-6"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                                    clip-rule="evenodd"
+                                />
+                            </svg>
+                        </span>
+                    </div>
                 </div>
             </header>
+            <!-- MAIN CONTENT -->
+            <section id="aboutus" class="app-container">
+                <div class="content-group">
+                    <div class="content-title">
+                        <h2 class=""><span>Our mission:</span></h2>
+                        <span
+                            >Providing fresh and nutritious food for dieters
+                        </span>
+                    </div>
+                    <p class="content">
+                        At our company, we are passionate about providing fresh
+                        and nutritious food products that can help dieters
+                        achieve their goals. We understand that losing weight or
+                        maintaining a healthy diet can be challenging, which is
+                        why we carefully select our food products to ensure they
+                        are suitable for people on a diet.
+                    </p>
+                    <p class="content">
+                        Our mission is to provide our customers with the best
+                        quality products that can help them achieve their weight
+                        loss or healthy eating goals. We believe that by
+                        offering a range of fresh and healthy food options, we
+                        can help our customers lead a healthier and more
+                        fulfilling life.
+                    </p>
+                </div>
+                <div class="content-group">
+                    <div class="content-title">
+                        <h2 class=""><span>Our services:</span></h2>
+                        <span
+                            >Calorie-measuring machines, fast delivery, and
+                            exceptional customer experience
+                        </span>
+                    </div>
+                    <p class="content">
+                        We understand that our customers want to have access to
+                        high-quality food products that can help them achieve
+                        their dietary goals. That's why we have invested in the
+                        latest calorie-measuring machines to ensure that our
+                        products meet the dietary needs of our customers. Our
+                        machines are designed to provide accurate calorie
+                        measurements, so our customers can track their daily
+                        intake and stay on track with their diet plan.
+                    </p>
+                    <p class="content">
+                        In addition to our calorie-measuring machines, we also
+                        offer fast and reliable delivery services to ensure that
+                        our products arrive at your doorstep in a timely manner.
+                        Our team is also committed to providing exceptional
+                        customer experience, so if you have any questions or
+                        concerns, please do not hesitate to reach out to us.
+                    </p>
+                </div>
+                <div class="content-group">
+                    <div class="content-title">
+                        <h2 class=""><span>Our reach: </span></h2>
+                        <span>Multiple branches in Vietnam and overseas </span>
+                    </div>
+                    <p class="content">
+                        We are proud to have multiple branches located across
+                        Vietnam and even overseas. Our products are available to
+                        customers all around the world, and we are constantly
+                        expanding our business to reach new markets. We believe
+                        that by having multiple branches, we can provide our
+                        customers with fast and reliable delivery services, as
+                        well as access to a wider range of products.
+                    </p>
+                </div>
+                <div class="content-group">
+                    <div class="content-title">
+                        <h2 class=""><span>Our vision: </span></h2>
+                        <span
+                            >Expanding into other essential fields for
+                            society</span
+                        >
+                    </div>
+                    <p class="content">
+                        While we are proud to offer fresh and nutritious food
+                        products, we also believe that there are other essential
+                        fields that we can expand into. That's why we are
+                        planning to expand our business to other fields such as
+                        gaming, learning, coding, and other essential fields.
+                    </p>
+                    <p class="content">
+                        Our team is constantly working to develop new and
+                        innovative products that can meet the needs of our
+                        customers. We believe that by expanding into other
+                        fields, we can make a positive impact on people's lives
+                        and help them achieve their goals.
+                    </p>
+                </div>
+                <div class="content-group">
+                    <div class="content-title">
+                        <h2 class=""><span>Conclusion: </span></h2>
+                        <span>Thank you for choosing us</span>
+                    </div>
+                    <p class="content">
+                        We would like to thank you for choosing our company. We
+                        are committed to providing you with the best quality
+                        products and services, and we hope that our products and
+                        services can help you achieve your goals and lead a
+                        healthier and more fulfilling life. If you have any
+                        questions or concerns, please do not hesitate to reach
+                        out to us.
+                    </p>
+                </div>
+            </section>
             <!-- FOOTER -->
             <footer id="footer">
                 <div class="decorations-top"></div>
@@ -210,6 +356,10 @@
                     </div>
                 </div>
             </footer>
+            <script
+                src="../scripts/js/pages/aboutuspage.js"
+                type="module"
+            ></script>
         </div>
     </body>
 </html>

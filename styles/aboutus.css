@@ -1,0 +1,88 @@
+#aboutus {
+    margin-top: 60px;
+    margin-bottom: 80px;
+    padding: 30px;
+}
+
+.content-group:not(:last-child) {
+    margin-bottom: 50px;
+}
+
+.content-title {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.content-title > h2 {
+    position: relative;
+    color: var(--primary-2);
+    z-index: 3;
+    width: 25%;
+    height: 50px;
+    overflow: hidden;
+}
+
+.content-title > h2 > span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    display: inline-block;
+}
+
+.content-title > h2::before {
+    content: "";
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    background: var(--secondary-2);
+    z-index: 0;
+    transition: all 0.2s linear;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.content-title > h2:hover {
+    color: var(--white);
+}
+
+.content-title > h2:hover::before {
+    left: 0;
+}
+
+.content-title > span {
+    opacity: 0;
+    display: none;
+    font-weight: 600;
+    color: var(--gray-2);
+    font-size: 25px;
+    line-height: 2;
+    flex: 1;
+}
+
+.content-title:hover > span {
+    transition: all 2s linear;
+    left: 10%;
+    opacity: 1;
+    display: block;
+}
+
+.content {
+    padding: 0 24px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.content:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+#app.dark-theme .content-title > h2 {
+    color: wheat;
+}
