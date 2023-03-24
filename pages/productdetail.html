@@ -45,19 +45,21 @@
                     <nav class="header-nav">
                         <ul class="nav-list">
                             <li class="nav-item">
-                                <a href="./diets.html">Diets</a>
+                                <a href="../pages/diets.html">Diets</a>
                             </li>
                             <li class="nav-item">
-                                <a href="./calorie.html">Calorie calculator</a>
+                                <a href="../pages/calorie.html"
+                                    >Calorie calculator</a
+                                >
                             </li>
                             <li class="nav-item">
-                                <a href="./menu.html">Menu</a>
+                                <a href="../pages/menu.html">Menu</a>
                             </li>
                             <li class="nav-item">
-                                <a href="./delivery.html">Delivery</a>
+                                <a href="../pages/delivery.html">Delivery</a>
                             </li>
                             <li class="nav-item">
-                                <a href="./aboutus.html">about us</a>
+                                <a href="../pages/aboutus.html">about us</a>
                             </li>
                             <li class="nav-item">
                                 <a
@@ -68,13 +70,20 @@
                                 >
                             </li>
                             <li class="nav-item">
-                                <a href="./FAQ.html">FAQ</a>
+                                <a href="../pages/game.html">Game</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../pages/FAQ.html">FAQ</a>
                             </li>
                         </ul>
                     </nav>
                     <div class="header-action">
                         <div class="button-change-theme"></div>
-                        <div id="button-cart" class="button-cart">
+                        <div
+                            id="button-cart"
+                            class="button-cart"
+                            style="position: relative"
+                        >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -89,10 +98,37 @@
                                     d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
                                 />
                             </svg>
+                            <div class="tooltip show-cart-tooltip">
+                                <!-- <span class="arrow-up"></span>
+                                <div class="tooltip-content">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Quidem facilis maiores
+                                        facere assumenda velit debitis quae
+                                        rerum neque similique corporis?
+                                    </p>
+                                </div> -->
+                            </div>
                         </div>
                         <button id="button-login" class="button-register">
                             Sign In
                         </button>
+                    </div>
+                    <div class="nav-mobile">
+                        <span class="nav-mobile-icon">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="w-6 h-6"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                                    clip-rule="evenodd"
+                                />
+                            </svg>
+                        </span>
                     </div>
                 </div>
             </header>

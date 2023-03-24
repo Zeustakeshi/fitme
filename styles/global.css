@@ -147,7 +147,6 @@ body::-webkit-scrollbar {
 }
 
 /* DECORATIONS */
-
 .decorations-top {
     display: flex;
     justify-content: center;
@@ -219,11 +218,19 @@ body::-webkit-scrollbar {
     background: var(--slate-900);
 }
 
+/* TEXT NEON DARK THEME */
+#app.dark-theme .text-neon {
+    --neon-color: var(--secondary-2);
+    text-shadow: 0 0 00px #fff, 0 0 0px #fff, 0 0 10px #fff,
+        0 0 20px var(--neon-color), 0 0 50px var(--neon-color),
+        0 0 60px var(--neon-color), 0 0 100px var(--neon-color),
+        0 0 80px var(--neon-color);
+}
+
 .skeleton {
     animation: skeleton-loading 1s linear infinite alternate;
 }
 /* SKELETON DARK THEME */
-
 #app.dark-theme .skeleton {
     background-color: rgb(51, 65, 85);
     background-image: linear-gradient(

@@ -49,11 +49,11 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.content-title > h2:hover {
+.content-group:hover .content-title > h2 {
     color: var(--white);
 }
 
-.content-title > h2:hover::before {
+.content-group:hover .content-title > h2::before {
     left: 0;
 }
 
@@ -67,7 +67,7 @@
     flex: 1;
 }
 
-.content-title:hover > span {
+.content-group:hover .content-title > span {
     transition: all 2s linear;
     left: 10%;
     opacity: 1;
