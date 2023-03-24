@@ -6,7 +6,7 @@ import Egg from "./egg.js";
 import Obstacle, { Sanctuary } from "./obstacle.js";
 import Player from "./player.js";
 import { IEnemy } from "./interfaces/enemy.interface";
-import Enemy from "./enemy.js";
+import Enemy, { EggEaters, EggSucker } from "./enemy.js";
 import { ILarva } from "./interfaces/larva.interface";
 import { IParticle } from "./interfaces/particle.interface";
 import { ILevel } from "./interfaces/level.interface";
@@ -201,7 +201,15 @@ export default class AdventureEgg implements IGame {
     }
 
     private addEnemy() {
-        this.enemies.push(new Enemy(this));
+        const enemyTypes = this.levels[this.level].enemyTypes;
+        const enemyType =
+            enemyTypes[Math.floor(Math.random() * enemyTypes.length)];
+
+        if (enemyType === "EggEaters") {
+            this.enemies.push(new EggEaters(this));
+        } else if (enemyType === "EggSucker") {
+            this.enemies.push(new EggSucker(this));
+        }
     }
 
     private drawStatusText() {

@@ -1,4 +1,4 @@
-import { IEnemy } from "./interfaces/enemy.interface";
+import { IEggEaters, IEggSucker, IEnemy } from "./interfaces/enemy.interface";
 import { IGame } from "./interfaces/game.interface";
 
 export default class Enemy implements IEnemy {
@@ -109,3 +109,7 @@ export default class Enemy implements IEnemy {
         this.spriteY = this.collisionY - this.height * 0.7;
     }
 }
+
+export class EggEaters extends Enemy implements IEggEaters {}
+
+export class EggSucker extends Enemy implements IEggSucker {}

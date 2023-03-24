@@ -15,3 +15,7 @@ export interface IEnemy extends IGameObject {
     speedX: number;
     speedY: number;
 }
+
+export interface IEggEaters extends IEnemy {}
+
+export interface IEggSucker extends IEnemy {}

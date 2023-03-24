@@ -1,3 +1,5 @@
+type Tenemy = "EggEaters" | "EggSucker";
+
 export interface ILevel {
     numberOfObstacle: number;
     numberOfEnemy: number;
@@ -9,4 +11,5 @@ export interface ILevel {
     isFinal: boolean;
     enemySpeed: number;
     hatchTimer: number;
+    enemyTypes: Tenemy[];
 }

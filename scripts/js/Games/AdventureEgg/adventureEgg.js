@@ -1,7 +1,7 @@
 import Egg from "./egg.js";
 import Obstacle, { Sanctuary } from "./obstacle.js";
 import Player from "./player.js";
-import Enemy from "./enemy.js";
+import { EggEaters, EggSucker } from "./enemy.js";
 import levelData from "./levelData.js";
 export default class AdventureEgg {
     //public
@@ -172,7 +172,14 @@ export default class AdventureEgg {
         this.eggs.push(new Egg(this));
     }
     addEnemy() {
-        this.enemies.push(new Enemy(this));
+        const enemyTypes = this.levels[this.level].enemyTypes;
+        const enemyType = enemyTypes[Math.floor(Math.random() * enemyTypes.length)];
+        if (enemyType === "EggEaters") {
+            this.enemies.push(new EggEaters(this));
+        }
+        else if (enemyType === "EggSucker") {
+            this.enemies.push(new EggSucker(this));
+        }
     }
     drawStatusText() {
         this.ctx.save();

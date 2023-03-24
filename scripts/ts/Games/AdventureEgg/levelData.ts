@@ -12,6 +12,7 @@ const levelData: ILevel[] = [
         hatchTimer: 10000,
         enemySpeed: 2,
         numberOfSanctuary: 1,
+        enemyTypes: ["EggEaters"],
     },
     {
         level: 2,
@@ -24,6 +25,7 @@ const levelData: ILevel[] = [
         hatchTimer: 1000,
         enemySpeed: 10,
         numberOfSanctuary: 1,
+        enemyTypes: ["EggEaters"],
     },
     {
         level: 3,
@@ -36,6 +38,7 @@ const levelData: ILevel[] = [
         hatchTimer: 1000,
         enemySpeed: 2,
         numberOfSanctuary: 1,
+        enemyTypes: ["EggEaters"],
     },
     {
         level: 4,
@@ -48,6 +51,7 @@ const levelData: ILevel[] = [
         hatchTimer: 1000,
         enemySpeed: 2,
         numberOfSanctuary: 1,
+        enemyTypes: ["EggEaters"],
     },
     {
         level: 5,
@@ -60,6 +64,7 @@ const levelData: ILevel[] = [
         hatchTimer: 1000,
         enemySpeed: 2,
         numberOfSanctuary: 1,
+        enemyTypes: ["EggEaters"],
     },
     {
         level: 6,
@@ -72,6 +77,7 @@ const levelData: ILevel[] = [
         hatchTimer: 1000,
         enemySpeed: 2,
         numberOfSanctuary: 1,
+        enemyTypes: ["EggEaters", "EggSucker"],
     },
 ];
 

@@ -82,3 +82,7 @@ export default class Enemy {
         this.spriteY = this.collisionY - this.height * 0.7;
     }
 }
+export class EggEaters extends Enemy {
+}
+export class EggSucker extends Enemy {
+}
