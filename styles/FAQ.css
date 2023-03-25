@@ -1,0 +1,128 @@
+#FAQ {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.FAQ-title {
+    position: relative;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.FAQ-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 10%;
+    background: var(--primary-2);
+}
+
+.FAQ-search-wrapper {
+    display: flex;
+    background: var(--gray-4);
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.FAQ-search-wrapper > input {
+    color: var(--gray-1);
+    padding: 16px 20px;
+    width: 100%;
+    border-radius: inherit;
+    background: transparent;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.FAQ-search-wrapper > button {
+    width: 60px;
+    height: 100%;
+    padding: 12px;
+    background: var(--primary-1);
+    color: var(--white);
+}
+
+.FAQ-list {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    transition: all 0.8s linear;
+}
+
+.FAQ-item {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 25px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.FAQ-item--active {
+    border: 1px solid var(--primary-1);
+}
+
+.FAQ-item .content {
+    flex: 1;
+}
+
+.FAQ-item .content .question {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.answer {
+    display: none;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--gray-2);
+}
+
+.FAQ-item--active .answer {
+    display: block;
+}
+
+.button-toggle {
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;
+    padding: 10px;
+    background: var(--primary-1);
+    color: var(--white);
+    transform: rotate(-90deg);
+    transition: all 0.4s ease-in-out;
+    /* color: var; */
+}
+
+.FAQ-item--active .button-toggle {
+    transform: rotate(0deg);
+}
+
+/* DARK THEME */
+
+#app.dark-theme .FAQ-search-wrapper {
+    background: var(--slate-800);
+}
+
+#app.dark-theme .FAQ-search-wrapper > input {
+    color: var(--white);
+}
+
+#app.dark-theme .FAQ-item {
+    background: var(--slate-800);
+}

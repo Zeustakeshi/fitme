@@ -20,6 +20,9 @@
         <link rel="stylesheet" href="../styles/footer.css" />
         <link rel="stylesheet" href="../styles/modal.css" />
         <link rel="stylesheet" href="../styles/auth.css" />
+        <link rel="stylesheet" href="../styles/customcheckbox.css" />
+        <link rel="stylesheet" href="../styles/buttonmovetotop.css" />
+        <link rel="stylesheet" href="../styles/FAQ.css" />
         <!-- TITLE -->
         <title>FAQ</title>
     </head>
@@ -92,6 +95,30 @@
                     </div>
                 </div>
             </header>
+            <!-- MAIN CONTENT -->
+            <section id="FAQ" class="app-container">
+                <h1 class="FAQ-title">FAQs</h1>
+                <div class="FAQ-search-wrapper">
+                    <input type="text" placeholder="Enter your Questions..." />
+                    <button>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-6 h-6"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                            />
+                        </svg>
+                    </button>
+                </div>
+                <div class="FAQ-questions"></div>
+            </section>
             <!-- FOOTER -->
             <footer id="footer">
                 <div class="decorations-top"></div>
@@ -209,6 +236,7 @@
                     </div>
                 </div>
             </footer>
+            <script src="../scripts/js/pages/FAQpage.js" type="module"></script>
         </div>
     </body>
 </html>
