@@ -1,25 +1,26 @@
+import ImageZoom from "./imageZoom.js";
+
 export default class ProductDetail {
     constructor(rootSeclector, data) {
         this.root = document.querySelector(rootSeclector);
         this.data = data;
-        console.log(this.data);
-        console.log(this.html());
     }
 
     render() {
         if (!this.root) return;
         this.root.insertAdjacentHTML("afterbegin", this.html());
+        this.productMainImage = new ImageZoom(
+            ".product-image",
+            this.data.imgURL,
+            "product-main-image"
+        );
+        this.productMainImage.render();
     }
 
     html() {
         return `
         <div class="product-details-left">
-            <div class="product-image skeleton">
-                <img
-                    src="${this.data.imgURL}"
-                    alt="product-large-image"
-                />
-            </div>
+            <div class="product-image skeleton"></div>
         </div>
         <div class="product-details-right">
             <h1 class="product-name product-name--sale">${this.data.name}</h1>
