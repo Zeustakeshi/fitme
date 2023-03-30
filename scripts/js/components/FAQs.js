@@ -10,6 +10,7 @@ export default class FAQs {
     }
 
     initQuestion() {
+        this.questions = [];
         this.data.forEach((item, index) => {
             this.questions.push(
                 new FAQItem(this.root, index + 1, item.question, item.answer)
@@ -19,10 +20,16 @@ export default class FAQs {
 
     render() {
         if (!this.root) return;
-        this.root.insertAdjacentHTML("afterbegin", this.html());
+        this.root.innerHTML = this.html();
         this.questions.forEach((question) => {
             question.eventHandler();
         });
+    }
+
+    upDate(newData) {
+        this.data = newData;
+        this.initQuestion();
+        this.render();
     }
 
     html() {
